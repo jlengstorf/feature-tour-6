@@ -1,6 +1,9 @@
 exports.handler = () => {
   return {
     statusCode: 200,
-    body: 'hello world!',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({message: 'hello world!'}),
   };
 };
